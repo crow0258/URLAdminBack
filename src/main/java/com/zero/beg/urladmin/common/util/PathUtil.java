@@ -9,7 +9,7 @@ import java.io.File;
 public class PathUtil {
     public String getHomePath(){
         ApplicationHome h = new ApplicationHome(getClass());
-        File jarFile = h.getSource();
+        File jarFile = h.getSource().getParentFile();
         return jarFile.getAbsolutePath();
     }
 }
